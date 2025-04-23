@@ -44,3 +44,19 @@
 .title{
     font-family: 'Dancing Script', !important;
 }
+
+
+/* category */
+section{
+    @apply w-full px-[12%] py-[80px] flex flex-col;
+}
+
+.section_heading{
+    @apply text-center text-5xl w-full font-semibold font-kalnia;
+}
+
+
+
+.Slide_text{
+    @apply text-center w-full text-base font-semibold inline-block hidden group-hover:inline-block;
+}
