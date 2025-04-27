@@ -12,6 +12,8 @@ import slideImage03 from './../../assets/h3_cat-2.jpg'
 import slideImage04 from './../../assets/h3_cat-3.jpg'
 import slideImage05 from './../../assets/h3_cat-7.jpg'
 
+import slideImage06 from './../../assets/product_18_1-600x600.jpg'
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { Autoplay } from 'swiper/modules'
@@ -20,12 +22,14 @@ const index = () => {
   return (
     <>
       <div className="flex flex-col gap-[20px] relative min-h-[100vh] bg-[#ffded1]">
+        {/* navbar */}
         <Nav />
 
         {/* hero section */}
-        <div className="w-full px-[12%] pt-[100px] flex gap-[20px] flex-col lg:flex-row">
+        <div className="w-full px-[12%] pt-[100px] flex flex-col lg:flex-row gap-[20px]">
+          
           {/* tulisan */}
-          <div className="flex flex-col lg:w-[50%] w-full items-start gap-4 justify-center">
+          <div className="flex flex-col lg:w-[50%] border-8 w-full items-start gap-4 justify-center">
             <small className="text-4xl title font-dancing">Best Seller</small>
             <h2 className="text-7xl 2xl:text-8xl font-medium text-red-600 font-kalnia">
               Ice Cream <br /> Novelties
@@ -49,7 +53,7 @@ const index = () => {
             />
           </div>
 
-          {/* hiasan */}
+          {/* element hiasan */}
           <img
             src={element01}
             alt="element1"
@@ -189,6 +193,7 @@ const index = () => {
       {/*  */}
       <section>
         <div className="flex gap-[10px] flex-wrap lg:flex-nowrap">
+
           <div className="w-full sm:w-[46%] lg:w-[33%] h-[550px] bg-[url(assets/h3_bn-2.jpg)] bg-cover p-6 flex flex-col items-center pt-15 gap-2 text-white">
             <small className='text-2xl'>Save 20% off</small>
             <h3>Summer 2025</h3>
@@ -197,6 +202,7 @@ const index = () => {
               Shop Now <i className="ri-arrow-right-line"></i>{' '}
             </button>
           </div>
+
           <div className="w-full sm:w-[46%] lg:w-[33%] h-[550px] bg-[url(assets/h3_bn-1.jpg)] bg-cover p-6 flex flex-col items-center pt-15 gap-2 text-white">
             <small className='text-2xl'>Save 20% off</small>
             <h3>Summer 2025</h3>
@@ -205,6 +211,7 @@ const index = () => {
               Shop Now <i className="ri-arrow-right-line"></i>{' '}
             </button>
           </div>
+
           <div className="w-full lg:w-[33%] h-[550px] flex flex-col gap-10">
             <div className="h-[250px] w-full bg-[url(assets/h3_bn-4.jpg)] bg-cover p-6 flex flex-col pt-4 gap-2 text-white">
               <h3 className='text-3xl'>Best Selling</h3>
@@ -219,7 +226,44 @@ const index = () => {
               </p>
             </div>
           </div>
+
         </div>
+      </section>
+
+
+      {/* popular flavor section */}
+      <section id='popular'>
+        <h3 className="section_heading">Popular Flavor</h3>
+            <Swiper>
+              <SwiperSlide>
+                <div className='relative flex flex-col gap-[10px] card'>
+                  <div className='w-full'>
+                    <img src={slideImage06} alt="slider-image" className='w-full' />
+
+                      <div className='absolute top-5 flex flex-col right-5 gap-2 icons-card hidden'>
+                            <i className='ri-heart-line icon-card'></i>
+                            <i className='ri-shuffle-line icon-card'></i>
+                            <i className='ri-eye-line icon-card'></i>
+                      </div>
+
+                  </div>
+
+                  <div className=''>
+                    <div className=''>
+                        <i className='ri-star-fill'></i>
+                        <i className='ri-star-fill'></i>
+                        <i className='ri-star-fill'></i>
+                        <i className='ri-star-line'></i>
+                        <i className='ri-star-line'></i>
+                    </div>
+
+                    <h2 className='text-lg font-bold text-rose-400 text-center'>Chocolate Fudge Browning</h2>
+                    <span>$7.50</span>
+                  </div>
+                </div>
+              </SwiperSlide>
+             
+            </Swiper>
       </section>
     </>
   )
